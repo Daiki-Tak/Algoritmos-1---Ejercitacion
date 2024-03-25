@@ -1,23 +1,25 @@
-import java.util.Arrays;
-
 public class Estudiante {
     private String nombre;
     private int edad;
-    private String carrera;
-    private String[] materias;
+    private static int estudiantesTotales = 0;
 
-    public Estudiante(String nombre, int edad, String carrera, String[] materias) {
+    public Estudiante(String nombre, int edad){
         this.nombre = nombre;
         this.edad = edad;
-        this.carrera = carrera;
-        this.materias = materias;
+        Estudiante.agregarEstudiante();
     }
 
-    public void getEstudiante() {
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Edad: " + edad);
-        System.out.println("Carrera: " + carrera);
-        System.out.println("Materias: ");
-        System.out.println(Arrays.toString(materias));
+    public void presentarse(){
+        System.out.println("Hola, mi nombre es "
+         + this.nombre + " y tengo " 
+         + this.edad + " años.");
+    }
+
+    public static int getEstudiantesTotales(){
+        return estudiantesTotales;
+    }
+
+    public static void agregarEstudiante(){
+        estudiantesTotales++;
     }
 }
