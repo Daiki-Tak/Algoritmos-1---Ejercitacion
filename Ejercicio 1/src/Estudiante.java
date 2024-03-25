@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Estudiante {
     private String nombre;
     private int edad;
@@ -16,6 +18,6 @@ public class Estudiante {
         System.out.println("Edad: " + edad);
         System.out.println("Carrera: " + carrera);
         System.out.println("Materias: ");
-        System.out.println(this.materias.toString());
+        System.out.println(Arrays.toString(materias));
     }
 }
