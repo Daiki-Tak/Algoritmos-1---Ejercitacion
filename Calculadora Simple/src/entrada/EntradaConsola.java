@@ -22,20 +22,7 @@ public class EntradaConsola {
             System.out.println("Ingrese el segundo número: ");
             int num2 = obj.nextInt();
 
-            switch(operador){
-                case "+":
-                    SalidaConsola.mostrarResultado(num1 + num2);
-                    break;
-                case "-":
-                    SalidaConsola.mostrarResultado(num1 - num2);
-                    break;
-                case "*":
-                    SalidaConsola.mostrarResultado(num1 * num2);
-                    break;
-                case "/":
-                    SalidaConsola.mostrarResultado(num1 / num2);
-                    break;
-            }
+            SalidaConsola.mostrarResultado(num1, operador, num2);
         }
     }
 }
